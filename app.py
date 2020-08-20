@@ -60,6 +60,6 @@ def edit(id):
     else:
         return render_template('edit.html',post=post)
 
-#Debugging mode
+#Debugging mode may turn on here
 if __name__=="__main__":
     app.run()
