@@ -1,0 +1,23 @@
+<!--Extending all the files from base file -->
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Post</title>
+{% endblock %}
+
+{% block body %}
+<h1> Editing Posts </h1>  
+
+
+<hr>
+<h2> Edit: </h2>
+<!--Form deails for Editing -->
+<form action='/posts/edit/{{post.id}}' method='POST'>
+
+    Title : <input class="form-control" type="text" name="title" id="title" value="{{post.title}}"><br>
+    Author :<input class="form-control" type="text" name="author" id="author" value="{{post.author}}"><br>
+    Post :<textarea class="form-control" type="text" name="content" id="content"  placeholder="{{post.content}}" rows="4"></textarea><br>
+    <input type="submit" value='Save'>
+
+</form>
+{% endblock %}
