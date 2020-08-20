@@ -37,7 +37,6 @@ def post():
     else:
         all_posts=BlogPost.query.order_by(BlogPost.date_posted).all();       
         return render_template('post.html', posts=all_posts)
-    endif
 
 #Deleting the posts
 @app.route('/posts/delete/<int:id>')
